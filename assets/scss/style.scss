@@ -1,164 +1,131 @@
 @import "../scss/_Variables.scss";
-@import "../scss/_prod.scss";
-@import "../scss/_home.scss";
+
+
 
 * {
     margin: 0;
     padding: 0;
     font-family: $font2;
+    box-sizing: border-box;
 }
 
-.container-index {
-    width: 100%;
-    height: 100vh;
-    background-image: url(/assets/media/fondo.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    padding-top: 30px;
-    box-sizing: border-box;
-    .navbar {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        background: rgba(29,33,61,0.5);
-        padding: 0 60px;
-        box-sizing: border-box;
-    }
-    .logo {
-        width: 155px;
-        h1 {
-            width: 30px;
-            position: relative;
-            font-family: $font1;
-            z-index: 10;
-            cursor: pointer;
-            color: #fff;
-        }
-    }
-    nav {
-        flex: 1;
-        li {
-            list-style: none;
-            display: inline-block;
-            margin-right: 60px;
-            a {
-                text-decoration: none;
-                color: #fff;
-                font-size: 14px;
-            }
-        }
-    }
-    .user {
-        display: flex;
-        align-items: center;
-        color: #fff;
-        font-size: 14px;
-        img {
-            width: 30px;
-            margin-left: 15px;
-            cursor: pointer;
-            border-radius: 100px;
-        }
-    }
-    .sidebar {
-        width: 155px;
-        height: 100vh;
-        background: rgba(29,31,58,0.5);
-        position: absolute;
-        top: 0;
-        left: 0;
+.container-principal {
+        .index {
+            width: 1000px;
         
-        .search {
-            width: 20px;
-            display: block;
-            margin: 120px auto 0;
-            color: #fff;
-        }
-        .social-links {
-            width: 20px;
-            display: block;
-            margin: 220px auto 0;
-            text-align: center;
-            i {
-                color: #fff;
-                height: 15px;
-                margin-bottom: 30px;
+            .logo {
+                font-family: $font1;
+                font-size: 30px;
+                color: cadetblue !important;
             }
         }
-        .inf {
-            color: #fff;
-            width: 20px;
-            position: absolute;
-            left: 50%;
-            bottom: 30px;
-            transform: translateX(-50%);
+        
+        .content-home {
+            margin: 0 auto;
         }
-    }
-    .msg-container {
-        width: 600px;
-        height: 280px;
-        position: absolute;
-        left: 14%;
-        top: 57%;
-        transform: translateY(-50%);
-        overflow: hidden;
-        #slider {
-            display: inline-flex;
-            transition: 0.5s;
+        
+        .metodode {
+            margin: 3em 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .gp {
+                margin: 2em ;
+                h2 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: grey;
+                }
+            }
         }
-        .msg-col {
-            width: 600px;
-            height: 200px;
-            h1 {
-                color: #fff;
-                font-size: 80px;
-                font-weight: 100;
-                margin: 10px  0;
+        
+        .main-home {
+            width: 100%;
+            box-shadow: $shadow;
+            background-color: cadetblue;
+            margin: 1em auto;
+            .header-main-home {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+                h1 {
+                    font-family: $font3 ;
+                    font-size: 25px;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    
+    .libros-onfire {
+        margin: 3em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .books-content {
+            margin: 1em auto;
+            box-shadow: $shadow;
+            height: 400px;
+            width: 300px;
+            
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            img {
+                height: 15em;
+                width: 10em;
+                box-shadow: $shadow;
+                cursor: pointer;
+            }
+            h2 {
+                font-size: 15px;
+                font-family: $font3;
+                margin: 1em ;
+                text-align: center;
             }
             p {
-                color: #ddd;
                 font-size: 15px;
-                line-height: 25px;
+                font-weight: bold;
+                del {
+                    color: grey;
+                    font-size: 12px;
+                }
             }
             a {
-                display: inline-block;
-                text-decoration: none;
-                color: #555;
-                background: #fff;
-                font-size: 15px;
-                padding: 10px 35px;
-                border-radius: 30px;
-                margin-top: 25px;
+                background-color: $color1;
+                padding: 5px 15px;
+                color: wheat;
             }
-        }
-    }
-    .controller {
-        width: 1px;
-        height: 320px;
-        display: block;
-        background-color: #c0c0c0;
-        position: absolute;
-        top: 55%;
-        right: 50px;
-        transform: translateY(-50%);
-        #line1, #line2, #line3, #line4 {
-            height: 80px;
-            width: 10px;
-            cursor: pointer;
-            transform: translatex(-50%);
-        }
-        #active {
-            width: 5px;
-            height: 80px;
-            border-radius: 10px;
-            background: #fff;
-            position: absolute;
-            top: 0;
-            transform: translatex(-50%);
-            transition: 0.5s;
+            a:hover {
+                background-color: #000;
+            }
         }
     }
 }
 
+footer {
+    padding: 40px 0;
+    background-color: #000;
+    .footer-social {
+        text-align: center;
+        padding-bottom: 25px;
+        color: #fff;
+        a {
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+        }
+    }
+}
