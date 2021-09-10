@@ -1,0 +1,106 @@
+@import "../scss/_Variables.scss";
+* {
+    font-family: $font2;
+    box-sizing: border-box;
+}
+
+.container-principal {
+        .index {
+            width: 1000px;
+        
+            .logo {
+                font-family: $font1;
+                font-size: 30px;
+                color: cadetblue !important;
+            }
+        }
+        
+        .content-home {
+            margin: 0 auto;
+        }
+        
+        .metodode {
+            margin: 3em 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .gp {
+                margin: 2em ;
+                h2 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: grey;
+                }
+            }
+        }
+        
+        .main-home {
+            width: 100%;
+            box-shadow: $shadow;
+            background-color: cadetblue;
+            margin: 1em auto;
+            .header-main-home {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+                h1 {
+                    font-family: $font3 ;
+                    font-size: 25px;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    
+    .libros-onfire {
+        margin: 3em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .books-content {
+            margin: 1em auto;
+            box-shadow: $shadow;
+            height: 400px;
+            width: 300px;
+            
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            img {
+                height: 15em;
+                width: 10em;
+                box-shadow: $shadow;
+                cursor: pointer;
+            }
+            h2 {
+                font-size: 15px;
+                font-family: $font3;
+                margin: 1em ;
+                text-align: center;
+            }
+            p {
+                font-size: 15px;
+                font-weight: bold;
+                del {
+                    color: grey;
+                    font-size: 12px;
+                }
+            }
+            a {
+                background-color: $color1;
+                padding: 5px 15px;
+                color: wheat;
+            }
+            a:hover {
+                background-color: #000;
+            }
+        }
+    }
+}
