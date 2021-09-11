@@ -54,7 +54,6 @@
   align-items: center; }
   .container-principal .libros-onfire .books-content {
     margin: 1em auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     height: 400px;
     width: 300px;
     background-color: #fff;
@@ -63,14 +62,14 @@
     align-items: center;
     flex-direction: column; }
     .container-principal .libros-onfire .books-content img {
-      height: 15em;
-      width: 10em;
+      height: 20em;
+      width: 13em;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       cursor: pointer; }
     .container-principal .libros-onfire .books-content h2 {
       font-size: 15px;
       font-family: "Besley", serif;
-      margin: 1em;
+      margin: 0.5em;
       text-align: center; }
     .container-principal .libros-onfire .books-content p {
       font-size: 15px;
@@ -81,7 +80,8 @@
     .container-principal .libros-onfire .books-content a {
       background-color: #b61928;
       padding: 5px 15px;
-      color: wheat; }
+      color: #fff;
+      transition: 0.5s; }
     .container-principal .libros-onfire .books-content a:hover {
       background-color: #000; }
 

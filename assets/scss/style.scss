@@ -69,7 +69,6 @@
         align-items: center;
         .books-content {
             margin: 1em auto;
-            box-shadow: $shadow;
             height: 400px;
             width: 300px;
             
@@ -79,15 +78,15 @@
             align-items: center;
             flex-direction: column;
             img {
-                height: 15em;
-                width: 10em;
+                height: 20em;
+                width: 13em;
                 box-shadow: $shadow;
                 cursor: pointer;
             }
             h2 {
                 font-size: 15px;
                 font-family: $font3;
-                margin: 1em ;
+                margin: 0.5em ;
                 text-align: center;
             }
             p {
@@ -101,7 +100,8 @@
             a {
                 background-color: $color1;
                 padding: 5px 15px;
-                color: wheat;
+                color: #fff;
+                transition: 0.5s;
             }
             a:hover {
                 background-color: #000;
