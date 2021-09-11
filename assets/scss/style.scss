@@ -169,4 +169,18 @@ footer {
             color: #ccc;
         }
     }
+    .editoriales-footer {
+        list-style: none;
+        text-align: start;
+        h3 {
+            color: #fff;
+            font-size: 20px;
+            font-family: $font3;
+            text-decoration: underline;
+        }
+        li {
+            color: #ccc;
+            
+        }
+    }
 }

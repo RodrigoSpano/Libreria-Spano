@@ -131,3 +131,13 @@ footer {
       font-family: "Besley", serif; }
     footer .libros-footer li {
       color: #ccc; }
+  footer .editoriales-footer {
+    list-style: none;
+    text-align: start; }
+    footer .editoriales-footer h3 {
+      color: #fff;
+      font-size: 20px;
+      font-family: "Besley", serif;
+      text-decoration: underline; }
+    footer .editoriales-footer li {
+      color: #ccc; }
