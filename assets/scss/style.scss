@@ -117,8 +117,13 @@ footer {
         text-align: center;
         padding-bottom: 25px;
         color: #fff;
+        h3 {
+            font-size: 20px;
+            font-family: $font3;
+            text-decoration: underline;
+        }
         a {
-            color: #fff;
+            color: #ccc;
             width: 40px;
             height: 40px;
             line-height: 38px;
@@ -126,6 +131,42 @@ footer {
             text-align: center;
             border-radius: 50%;
             margin: 0 8px;
+            font-size: 20px
+        }
+        i {
+            transition: 0.5s;
+        }
+        i:hover {
+            color: $color1;
+        }
+    }
+    .footer-list {
+        list-style: none;
+        text-align: start;
+        h3 {
+            color: #fff;
+            text-decoration: underline;
+            font-family: $font3;
+            font-size: 20px;
+        }
+        li {
+            a {
+                color: #ccc;
+                text-decoration: none;
+            }
+        }
+    }
+    .libros-footer {
+        list-style: none;
+        text-align: start;
+        h3 {
+            color: #fff;
+            text-decoration: underline;
+            font-size: 20px;
+            font-family: $font3;
+        }
+        li {
+            color: #ccc;
         }
     }
 }
