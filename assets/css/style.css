@@ -87,15 +87,14 @@
 
 footer {
   padding: 40px 0;
-  background-color: #000; }
+  background-color: cadetblue; }
   footer .footer-social {
     text-align: center;
     padding-bottom: 25px;
     color: #fff; }
     footer .footer-social h3 {
       font-size: 20px;
-      font-family: "Besley", serif;
-      text-decoration: underline; }
+      font-family: "Besley", serif; }
     footer .footer-social a {
       color: #ccc;
       width: 40px;
@@ -115,7 +114,6 @@ footer {
     text-align: start; }
     footer .footer-list h3 {
       color: #fff;
-      text-decoration: underline;
       font-family: "Besley", serif;
       font-size: 20px; }
     footer .footer-list li a {
@@ -126,7 +124,6 @@ footer {
     text-align: start; }
     footer .libros-footer h3 {
       color: #fff;
-      text-decoration: underline;
       font-size: 20px;
       font-family: "Besley", serif; }
     footer .libros-footer li {
@@ -137,7 +134,10 @@ footer {
     footer .editoriales-footer h3 {
       color: #fff;
       font-size: 20px;
-      font-family: "Besley", serif;
-      text-decoration: underline; }
+      font-family: "Besley", serif; }
     footer .editoriales-footer li {
+      color: #ccc; }
+  footer .fila-copy-footer {
+    text-align: center; }
+    footer .fila-copy-footer p {
       color: #ccc; }

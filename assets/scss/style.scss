@@ -112,15 +112,14 @@
 
 footer {
     padding: 40px 0;
-    background-color: #000;
+    background-color: cadetblue;
     .footer-social {
         text-align: center;
         padding-bottom: 25px;
-        color: #fff;
+        color: #fff;   
         h3 {
             font-size: 20px;
             font-family: $font3;
-            text-decoration: underline;
         }
         a {
             color: #ccc;
@@ -145,7 +144,6 @@ footer {
         text-align: start;
         h3 {
             color: #fff;
-            text-decoration: underline;
             font-family: $font3;
             font-size: 20px;
         }
@@ -161,7 +159,6 @@ footer {
         text-align: start;
         h3 {
             color: #fff;
-            text-decoration: underline;
             font-size: 20px;
             font-family: $font3;
         }
@@ -176,11 +173,16 @@ footer {
             color: #fff;
             font-size: 20px;
             font-family: $font3;
-            text-decoration: underline;
         }
         li {
             color: #ccc;
             
+        }
+    }
+    .fila-copy-footer {
+        text-align: center;
+        p {
+            color: #ccc;
         }
     }
 }
