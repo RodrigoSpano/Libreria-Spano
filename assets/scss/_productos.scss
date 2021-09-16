@@ -1,1 +1,51 @@
 @import "../scss/_Variables.scss";
+
+.content-bread {
+    margin: 0 10em;
+    .bread-libros {
+        .bread-lista {
+            list-style: none;
+            .bread-lista__item {
+                display: inline-block;
+                .bread__link {
+                    text-decoration: none;
+                    color: rgb(87, 85, 85);
+                }
+                .bread__link--home:hover {
+                    color: #000;
+                    text-decoration: underline;
+                    transform: translateX(-50%);
+                
+                }
+                .bread__link--libros::before {
+                    content: '/';
+                }
+                .bread__link--libros {
+                    color: $color1;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-color: #ccc;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 12em;
+    h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $font2;
+    }
+    p {
+        font-family: $font2;
+    }
+}
