@@ -49,3 +49,24 @@
         font-family: $font2;
     }
 }
+
+
+.main__books {
+    .libros__container {
+        margin-top: 110px;
+        .row {
+            .an {
+                .libros__Tarjetas {
+                    border: none;
+                    outline: none;
+                    background-color: #fff;
+                    border-radius: 20px;
+                }
+                .libros__Tarjetas:hover {
+                    transform: translateY(-15px);
+                    transition: transform .3s;
+                }
+            }
+        }
+    }
+}

@@ -41,6 +41,17 @@
   .hero p {
     font-family: "Montserrat", sans-serif; }
 
+.main__books .libros__container {
+  margin-top: 110px; }
+  .main__books .libros__container .row .an .libros__Tarjetas {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px; }
+  .main__books .libros__container .row .an .libros__Tarjetas:hover {
+    transform: translateY(-15px);
+    transition: transform .3s; }
+
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +64,13 @@
     font-family: "Amita", cursive;
     font-size: 30px;
     color: cadetblue !important; }
+  .container-principal .index .carrito {
+    font-size: 30px;
+    color: cadetblue; }
+  .container-principal .index .carrito:hover {
+    cursor: pointer;
+    color: #b61928;
+    font-size: 35px; }
 
 .container-principal .content-home {
   margin: 0 auto; }
