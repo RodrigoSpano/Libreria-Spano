@@ -17,50 +17,53 @@
 </head>
 
 <body>
-    <div class="container container-principal">
-        <div class="index container">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container atenas">
-                    <a class="logo navbar-brand" href="../index.html">Atenas</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active " aria-current="page" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="libros nav-link " href="./views/productos.html">Libros</a>
-
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Editorial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
+    <header>
+        <div class="container container-principal">
+            <div class="index container">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <div class="container atenas">
+                        <a class="logo navbar-brand" href="../index.html">Atenas</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active " aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="libros nav-link " href="./views/productos.html">Libros</a>
+    
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Editorial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#"><i class="carrito fab fa-shopify"></i></a>
                     </div>
-                    <a href="#"><i class="carrito fab fa-shopify"></i></a>
-                </div>
+                </nav>
+            </div>
+        </div>
+    
+        <div class="container-fluid content-bread">
+            <nav class="bread-libros">
+                <ul class="bread-lista">
+                    <li class="bread-lista__item"><a class="bread__link bread__link--home" href="../index.html"><i
+                                class="fas fa-long-arrow-alt-left"></i> Home</a>
+                    </li>
+                    <li class="bread-lista__item"><a class="bread__link bread__link--libros" href="#"> Libros</a>
+                    </li>
+                </ul>
             </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="container-fluid content-bread">
-        <nav class="bread-libros">
-            <ul class="bread-lista">
-                <li class="bread-lista__item"><a class="bread__link bread__link--home" href="../index.html"><i
-                            class="fas fa-long-arrow-alt-left"></i> Home</a>
-                </li>
-                <li class="bread-lista__item"><a class="bread__link bread__link--libros" href="#"> Libros</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
+    <main>
     <div class="hero container-fluid">
         <h1>Escoge el genero</h1>
         <p>Te recomendamos seleccionar la categoria de <strong>Libro</strong> que te interese para facilitar tu
@@ -68,40 +71,164 @@
     </div>
 
 
-<main>
+    <!-- filtros -->
+    <div class="container navbar-filtros">
+        <div class="generos__filtros">
+            <a href="#">Fantasia</a>
+            <a href="#">Ficcion</a>
+            <a href="#">Terror</a>
+            <a href="#">Romance</a>
+        </div>
+    </div>
+
+<!-- productos -->
     <div class="container container-main-libros">
+        <!-- row -->
         <div class="row content__cards">
-            <div class="card__body col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <img src="../assets/media/libros/bajo-las-estrellas.jpg" alt="bajo-las-estrellas">
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/romantico/bajo-las-estrellas.jpg" alt="bajo-las-estrellas">
                 <h2>Bajo las Estrellas</h2>
                 <p>$1300</p>
                 <a href="#" class="btn">Comprar</a>
             </div>
             <!-- card -->
-            <div class="card__body col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <img src="../assets/media/libros/bajo-las-estrellas.jpg" alt="bajo-las-estrellas">
-                <h2>Bajo las Estrellas</h2>
-                <p>$1300</p>
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/ficcion/riverdale.jpg" alt="riverdale">
+                <h2>Riverdale, El dia anterior</h2>
+                <p>$1500</p>
                 <a href="#" class="btn">Comprar</a>
             </div>
             <!-- card -->
-            <div class="card__body col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <img src="../assets/media/libros/bajo-las-estrellas.jpg" alt="bajo-las-estrellas">
-                <h2>Bajo las Estrellas</h2>
-                <p>$1300</p>
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/ficcion/sabrina.jpg" alt="sabrina">
+                <h2>Sabrina, El camino de la Bruja</h2>
+                <p>$1500</p>
                 <a href="#" class="btn">Comprar</a>
             </div>
             <!-- card -->
-            <div class="card__body col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <img src="../assets/media/libros/bajo-las-estrellas.jpg" alt="bajo-las-estrellas">
-                <h2>Bajo las Estrellas</h2>
-                <p>$1300</p>
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/ficcion/lo-poco-que-sabemos.png" alt="Lo poco que sabemos">
+                <h2>Lo poco que sabemos</h2>
+                <p>$2190</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+
+        <!-- row -->
+        <div class="row content__cards">
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/ficcion/la-vida-invisible-de.jpg" alt="la vida invisible de addie larue">
+                <h2>La vida invisible de Addie Larue</h2>
+                <p>$1800</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <!-- card -->
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/asedioytormenta.jpg" alt="asedioytormenta">
+                <h2>Asedio y Tormenta</h2>
+                <p>$2700</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <!-- card -->
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/las-lunas-de-sartre.jpg" alt="Las lunas de sartre">
+                <h2>Las Lunas de Sartre</h2>
+                <p>$1900</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <!-- card -->
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/lore.png" alt="Lore">
+                <h2>Lore</h2>
+                <p>$1990</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+
+        <!-- row -->
+        <div class="row content__cards">
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/rey-maldito.jpg" alt="el rey malvado">
+                <h2>El Rey Malvado</h2>
+                <p>$2500</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <!-- card -->
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/ultimo-mago.jpg" alt="El ultimo mago">
+                <h2>El Ultimo Mago</h2>
+                <p>$1999</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <!-- card -->
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/matar-un-reino.jpg" alt="matar un reino">
+                <h2>Matar un Reino</h2>
+                <p>$1990</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <!-- card -->
+            <div class="card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <img src="../assets/media/libros/fantasia/manuscritos-rojos.png" alt="los manuscritos rojos de la magia">
+                <h2>Los Manuscritos rojos de la Magia</h2>
+                <p>$2190</p>
                 <a href="#" class="btn">Comprar</a>
             </div>
         </div>
     </div>
 </main>
 
+<footer class="container-fluid">
+    <div class="row">
+        <div class="footer-social col col-sm-12 col-md-6 col-lg-3">
+            <h3>Redes Sociales</h3>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+
+        <ul class="footer-list col col-sm-12 col-md-6 col-lg-3">
+            <h3>Navegacion</h3>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Editorial</a>
+            </li>
+            <li>
+                <a href="#">Libros</a>
+            </li>
+            <li>
+                <a href="#">Informacion</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+        <ul class="libros-footer col col-sm-12 col-md-6 col-lg-3">
+            <h3>Libros</h3>
+            <li>Ficcion</li>
+            <li>Fantasia</li>
+            <li>Romance</li>
+            <li>Terror</li>
+        </ul>
+        <ul class="editoriales-footer col col-sm-12 col-md-6 col-lg-3">
+            <h3>Editoriales</h3>
+            <li>Salamandra</li>
+            <li>Hidra Editorial</li>
+            <li>Naranja</li>
+            <li>Vyr Editorial</li>
+            <li>Puck Editorial</li>
+        </ul>
+        <div class="row fila-copy-footer">
+            <p class="copyright col col-sm-12 col-md-12 col-lg-12">
+                Copyright © Editoriales mencionadas
+            </p>
+        </div>
+    </div>
+
+</footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"

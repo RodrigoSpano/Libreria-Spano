@@ -12,7 +12,6 @@
 
 .container-principal {
         .index {
-            width: 1000px;
         
             .logo {
                 font-family: $font1;
@@ -121,6 +120,7 @@
 }
 
 footer {
+    margin-top: 5em;
     padding: 40px 0;
     background-color: cadetblue;
     .footer-social {

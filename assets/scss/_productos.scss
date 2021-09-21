@@ -1,7 +1,7 @@
 @import "../scss/_Variables.scss";
 
 .content-bread {
-    margin: 0 10em;
+    
     .bread-libros {
         .bread-lista {
             list-style: none;
@@ -31,54 +31,82 @@
 }
 
 .hero {
-    background-color: #ccc;
-    width: 100%;
-    height: 200px;
+    background-color: cadetblue;
+    
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 12em;
     h1 {
         text-transform: uppercase;
         font-size: 20px;
-        font-weight: bold;
+        font-weight: 700;
         font-family: $font2;
+        
     }
     p {
         font-family: $font2;
     }
 }
 
+.navbar-filtros {
+    margin-top: 1em;
+    .generos__filtros {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        a {
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid cadetblue;
+            padding: 5px;
+            transition: 0.4s;
+        }
+        a:hover {
+            color: #ccc;
+            transform: translateY(5px);
+        }
+    }
+}
 
 .container-main-libros {
-    margin-top: 5em;
+    margin-top: 2em;
     .content__cards {
+        
+        grid-gap: 1em;
         display: flex;
         justify-content: space-between;
+        .card__body:hover {
+            transition:transform .3s;
+            transform: translateY(-15px);
+        }
         .card__body {
+            margin: 1em auto;
             display: flex;
             flex-direction: column;
             border: 1px solid rgba(128, 128, 128, 0.253);
-            border-radius: 5px;
+            border-radius: 8px;
             width: 15em;
             height: 25em;
             img {
                 width: 13em;
-                height: 20em;
+                height: 18em;
             }
             h2 {
-                text-align: start;
-                font-size: 15px;
+                text-align: center;
+                font-size: 12px;
                 font-weight: 700;
                 font-family: $font3;
+                transform: translateY(5px);
             } 
             p {
+                text-align: center;
                 font-size: 15px;
                 font-family: $font1;
             }
             .btn {
-                background-color: $color1;
+                background-color: cadetblue;
                 width: 100px ;
                 color: #fff;
                 transform: translateX(50px);
