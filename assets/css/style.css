@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: flex-start;
   padding-left: 12em; }
-  .hero h2 {
+  .hero h1 {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
@@ -41,16 +41,36 @@
   .hero p {
     font-family: "Montserrat", sans-serif; }
 
-.main__books .libros__container {
-  margin-top: 110px; }
-  .main__books .libros__container .row .an .libros__Tarjetas {
-    border: none;
-    outline: none;
-    background-color: #fff;
-    border-radius: 20px; }
-  .main__books .libros__container .row .an .libros__Tarjetas:hover {
-    transform: translateY(-15px);
-    transition: transform .3s; }
+.container-main-libros {
+  margin-top: 5em; }
+  .container-main-libros .content__cards {
+    display: flex;
+    justify-content: space-between; }
+    .container-main-libros .content__cards .card__body {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(128, 128, 128, 0.253);
+      border-radius: 5px;
+      width: 15em;
+      height: 25em; }
+      .container-main-libros .content__cards .card__body img {
+        width: 13em;
+        height: 20em; }
+      .container-main-libros .content__cards .card__body h2 {
+        text-align: start;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: "Besley", serif; }
+      .container-main-libros .content__cards .card__body p {
+        font-size: 15px;
+        font-family: "Amita", cursive; }
+      .container-main-libros .content__cards .card__body .btn {
+        background-color: #b61928;
+        width: 100px;
+        color: #fff;
+        transform: translateX(50px); }
+      .container-main-libros .content__cards .card__body .btn:hover {
+        background-color: black; }
 
 * {
   margin: 0;

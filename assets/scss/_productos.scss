@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 12em;
-    h2 {
+    h1 {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: bold;
@@ -51,22 +51,43 @@
 }
 
 
-.main__books {
-    .libros__container {
-        margin-top: 110px;
-        .row {
-            .an {
-                .libros__Tarjetas {
-                    border: none;
-                    outline: none;
-                    background-color: #fff;
-                    border-radius: 20px;
-                }
-                .libros__Tarjetas:hover {
-                    transform: translateY(-15px);
-                    transition: transform .3s;
-                }
+.container-main-libros {
+    margin-top: 5em;
+    .content__cards {
+        display: flex;
+        justify-content: space-between;
+        .card__body {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(128, 128, 128, 0.253);
+            border-radius: 5px;
+            width: 15em;
+            height: 25em;
+            img {
+                width: 13em;
+                height: 20em;
+            }
+            h2 {
+                text-align: start;
+                font-size: 15px;
+                font-weight: 700;
+                font-family: $font3;
+            } 
+            p {
+                font-size: 15px;
+                font-family: $font1;
+            }
+            .btn {
+                background-color: $color1;
+                width: 100px ;
+                color: #fff;
+                transform: translateX(50px);
+                
+            }
+            .btn:hover {
+                background-color: black;
             }
         }
     }
 }
+
