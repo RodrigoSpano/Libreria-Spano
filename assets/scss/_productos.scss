@@ -11,19 +11,20 @@
                     text-decoration: none;
                     color: rgb(87, 85, 85);
                 }
-                .bread__link--home:hover {
+                .bread__link--back:hover {
                     color: #000;
                     text-decoration: underline;
                     transform: translateX(-50%);
                 
                 }
-                .bread__link--libros::before {
+                .bread__link--back::after{
                     content: '/';
                 }
-                .bread__link--libros {
+                .bread__link--red {
                     color: $color1;
                     font-weight: bold;
                     font-size: 18px;
+                    cursor: text;
                 }
             }
         }

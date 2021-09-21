@@ -1,1 +1,14 @@
 @import "../scss/_Variables.scss";
+
+.navbar-filtros {
+    .generos__filtros {
+        #fantasia-block {
+            cursor: inherit;
+            color: $color1;
+            font-weight: 700;
+        }
+        #fantasia-block:hover {
+            transform: none;
+        }
+    }
+}

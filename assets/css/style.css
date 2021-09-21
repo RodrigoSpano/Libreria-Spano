@@ -14,16 +14,17 @@
     .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link {
       text-decoration: none;
       color: #575555; }
-    .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link--home:hover {
+    .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link--back:hover {
       color: #000;
       text-decoration: underline;
       transform: translateX(-50%); }
-    .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link--libros::before {
+    .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link--back::after {
       content: '/'; }
-    .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link--libros {
+    .content-bread .bread-libros .bread-lista .bread-lista__item .bread__link--red {
       color: #b61928;
       font-weight: bold;
-      font-size: 18px; }
+      font-size: 18px;
+      cursor: text; }
 
 .hero {
   background-color: cadetblue;
@@ -93,6 +94,14 @@
         transform: translateX(50px); }
       .container-main-libros .content__cards .card__body .btn:hover {
         background-color: black; }
+
+.navbar-filtros .generos__filtros #fantasia-block {
+  cursor: inherit;
+  color: #b61928;
+  font-weight: 700; }
+
+.navbar-filtros .generos__filtros #fantasia-block:hover {
+  transform: none; }
 
 * {
   margin: 0;
