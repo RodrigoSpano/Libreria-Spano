@@ -2,12 +2,12 @@
 
 .navbar-filtros {
     .generos__filtros {
-        #fantasia-block {
+        #selected-block {
             cursor: inherit;
             color: $color1;
             font-weight: 700;
         }
-        #fantasia-block:hover {
+        #selected-block:hover {
             transform: none;
         }
     }

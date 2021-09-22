@@ -95,12 +95,12 @@
       .container-main-libros .content__cards .card__body .btn:hover {
         background-color: black; }
 
-.navbar-filtros .generos__filtros #fantasia-block {
+.navbar-filtros .generos__filtros #selected-block {
   cursor: inherit;
   color: #b61928;
   font-weight: 700; }
 
-.navbar-filtros .generos__filtros #fantasia-block:hover {
+.navbar-filtros .generos__filtros #selected-block:hover {
   transform: none; }
 
 * {
