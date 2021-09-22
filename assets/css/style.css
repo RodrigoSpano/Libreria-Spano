@@ -110,7 +110,7 @@
   transform: none; }
 
 .error-404 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%; }
   .error-404 img {
     height: 800px;
