@@ -6,3 +6,15 @@ $font2 :'Montserrat', sans-serif;
 $font3 : 'Besley', serif;
 $shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
 $color1: #b61928;
+@mixin size-card {
+    width: 15em;
+    height: 25em;
+}
+@mixin size-img-card {
+    width: 13em;
+    height: 18em;
+}
+@mixin size-book {
+    height: 35em;
+    width:25em;
+}

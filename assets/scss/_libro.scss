@@ -1,0 +1,115 @@
+@import "./_Variables.scss";
+
+.product-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5em;
+    border-bottom: 1px #ccc solid;
+    img {
+        @include size-book ();
+        margin-bottom: 2em;
+    }
+    .info-libro {
+        margin-bottom: 2em;
+        transform: translateX(50px);
+        width: 50em;
+        h1 {
+            font-size: 30px;
+            font-family: $font1;
+        }
+        P {
+            transform: translateY(10px);
+            font-size: 40px;
+            font-weight: bold;
+            font-family: $font2;
+        }
+        .star {
+            transform: translateY(-10px);
+            i {
+                color: #ccc;
+            }
+            i:hover {
+                font-size: 20px;
+                color: burlywood;
+                cursor: pointer;
+            }
+        }
+        .payment-icons {
+            .icons {
+                i {
+                    font-size: 20px;
+                }
+            }
+            a {
+                font-size: 15px;
+                text-transform: uppercase;
+                color: cadetblue;
+            }
+            a:hover {
+                color: $color1;
+            }
+        }
+        .comprar-content {
+            width: 50%;
+            border-top: 1px #ccc solid;
+            margin-top: 1em;
+            padding-top: 1em;
+            .form-cantidad {
+                display: flex;
+                flex-direction: column;
+                font-family: $font1;
+                #quantity {
+                    width: 70px;
+                    text-decoration: none;
+                    padding-left: 7px;
+                }
+                label {
+                    color: grey;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                }
+            }
+            .botones-bc {
+                margin-top: 2em;
+                display: flex;
+                width: 30em;
+                button {
+                    border: none;
+                    color: white;
+                    font-size: 16px;
+                    transition: 0.5s;
+                }
+                .btn-book {
+                    background-color: cadetblue;
+                    text-align: center;
+                    padding: 10px 0;
+                    width: 30%;
+                }
+                .btn-book:hover {
+                    background-color: #000;
+                }
+                .btn-carro {
+                    padding: 10px 0;
+                    background-color: #ccc;
+                    width: 10%;
+                    
+                }
+                .btn-carro:hover {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+
+.about-libro {
+    margin-top: 5em;
+    padding-bottom: 5em;
+    border-bottom: 1px #ccc solid;
+    h2 {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    
+}

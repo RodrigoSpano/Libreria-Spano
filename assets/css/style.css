@@ -10,6 +10,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap");
 .content-bread .bread-libros .bread-lista {
   list-style: none; }
   .content-bread .bread-libros .bread-lista .bread-lista__item {
@@ -113,6 +116,92 @@
     height: 800px;
     width: 100%;
     object-fit: cover; }
+
+.product-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5em;
+  border-bottom: 1px #ccc solid; }
+  .product-page img {
+    height: 35em;
+    width: 25em;
+    margin-bottom: 2em; }
+  .product-page .info-libro {
+    margin-bottom: 2em;
+    transform: translateX(50px);
+    width: 50em; }
+    .product-page .info-libro h1 {
+      font-size: 30px;
+      font-family: "Amita", cursive; }
+    .product-page .info-libro P {
+      transform: translateY(10px);
+      font-size: 40px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif; }
+    .product-page .info-libro .star {
+      transform: translateY(-10px); }
+      .product-page .info-libro .star i {
+        color: #ccc; }
+      .product-page .info-libro .star i:hover {
+        font-size: 20px;
+        color: burlywood;
+        cursor: pointer; }
+    .product-page .info-libro .payment-icons .icons i {
+      font-size: 20px; }
+    .product-page .info-libro .payment-icons a {
+      font-size: 15px;
+      text-transform: uppercase;
+      color: cadetblue; }
+    .product-page .info-libro .payment-icons a:hover {
+      color: #b61928; }
+    .product-page .info-libro .comprar-content {
+      width: 50%;
+      border-top: 1px #ccc solid;
+      margin-top: 1em;
+      padding-top: 1em; }
+      .product-page .info-libro .comprar-content .form-cantidad {
+        display: flex;
+        flex-direction: column;
+        font-family: "Amita", cursive; }
+        .product-page .info-libro .comprar-content .form-cantidad #quantity {
+          width: 70px;
+          text-decoration: none;
+          padding-left: 7px; }
+        .product-page .info-libro .comprar-content .form-cantidad label {
+          color: grey;
+          text-transform: uppercase;
+          font-size: 15px; }
+      .product-page .info-libro .comprar-content .botones-bc {
+        margin-top: 2em;
+        display: flex;
+        width: 30em; }
+        .product-page .info-libro .comprar-content .botones-bc button {
+          border: none;
+          color: white;
+          font-size: 16px;
+          transition: 0.5s; }
+        .product-page .info-libro .comprar-content .botones-bc .btn-book {
+          background-color: cadetblue;
+          text-align: center;
+          padding: 10px 0;
+          width: 30%; }
+        .product-page .info-libro .comprar-content .botones-bc .btn-book:hover {
+          background-color: #000; }
+        .product-page .info-libro .comprar-content .botones-bc .btn-carro {
+          padding: 10px 0;
+          background-color: #ccc;
+          width: 10%; }
+        .product-page .info-libro .comprar-content .botones-bc .btn-carro:hover {
+          background-color: #000; }
+
+.about-libro {
+  margin-top: 5em;
+  padding-bottom: 5em;
+  border-bottom: 1px #ccc solid; }
+  .about-libro h2 {
+    text-transform: uppercase;
+    font-size: 25px; }
 
 * {
   margin: 0;
