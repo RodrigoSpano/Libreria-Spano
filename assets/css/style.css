@@ -13,6 +13,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap");
 .content-bread .bread-libros .bread-lista {
   list-style: none; }
   .content-bread .bread-libros .bread-lista .bread-lista__item {
@@ -202,6 +205,70 @@
   .about-libro h2 {
     text-transform: uppercase;
     font-size: 25px; }
+
+.carrito-content {
+  margin-top: 10em;
+  margin-bottom: 5em;
+  text-align: center; }
+  .carrito-content .line-hover {
+    font-size: 25px;
+    font-family: "Amita", cursive; }
+  .carrito-content .cart-counter {
+    margin-left: 5px;
+    color: cadetblue;
+    font-family: "Besley", serif; }
+
+.producto-carro {
+  border-top: 1px #ccc solid;
+  padding-top: 20px; }
+  .producto-carro .book-carrito {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center; }
+    .producto-carro .book-carrito .img-nameBook {
+      display: flex;
+      justify-content: center;
+      max-width: 300px; }
+      .producto-carro .book-carrito .img-nameBook #obse {
+        transform: translateX(-5px); }
+      .producto-carro .book-carrito .img-nameBook img {
+        width: 5em; }
+      .producto-carro .book-carrito .img-nameBook h2 {
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 10px;
+        transform: translateX(20px);
+        transition: all 0.5s; }
+      .producto-carro .book-carrito .img-nameBook h2:hover {
+        cursor: pointer; }
+
+.buy-shop {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  justify-content: center;
+  align-items: center; }
+  .buy-shop .boton-shop {
+    border: none;
+    color: #fff;
+    background: #23232c;
+    padding: 20px 50px;
+    max-width: 300px;
+    text-transform: uppercase;
+    transition: all 0.6s; }
+  .buy-shop .boton-shop:hover {
+    background: cadetblue; }
+  .buy-shop a {
+    font-size: 15px;
+    transform: translateY(10px);
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px black solid; }
+  .buy-shop a::before {
+    content: "<i class=" fas fa-shopping-cart "></i>"; }
 
 * {
   margin: 0;

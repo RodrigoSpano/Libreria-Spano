@@ -1,2 +1,81 @@
-@import "./_variables.scss";
+@import "./_Variables.scss";
 
+
+.carrito-content {
+    margin-top: 10em;
+    margin-bottom: 5em;
+    text-align: center;
+    .line-hover {
+        font-size: 25px;
+        font-family: $font1;
+    }
+    .cart-counter {
+        margin-left: 5px;
+        color: cadetblue;
+        font-family: $font3;
+    }
+}
+
+.producto-carro {
+    border-top: 1px #ccc solid;
+    padding-top: 20px;
+    .book-carrito {
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        text-align: center;
+        .img-nameBook {
+            display: flex;
+            justify-content: center;
+            max-width: 300px;
+            #obse {
+                transform: translateX(-5px);
+            }
+            img {
+                width: 5em;
+            }
+            h2 {
+                font-size: 15px;
+                font-weight: 700;
+                margin-top: 10px;
+                transform: translateX(20px);
+                transition: all 0.5s;
+            }
+            h2:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.buy-shop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    .boton-shop {
+        border: none;
+        color: #fff;
+        background: #23232c;
+        padding: 20px 50px;
+        max-width: 300px;
+        text-transform: uppercase;
+        transition: all 0.6s;
+    }
+    .boton-shop:hover {
+        background: cadetblue;
+    }
+    a {
+        font-size: 15px;
+        transform: translateY(10px);
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 2px black solid;
+    }
+    a::before {
+        content: "<i class="fas fa-shopping-cart"></i>";
+    }
+}
