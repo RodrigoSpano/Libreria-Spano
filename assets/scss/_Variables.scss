@@ -6,6 +6,7 @@ $font2 :'Montserrat', sans-serif;
 $font3 : 'Besley', serif;
 $shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
 $color1: #b61928;
+$shadow2: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 @mixin size-card {
     width: 15em;
     height: 25em;
