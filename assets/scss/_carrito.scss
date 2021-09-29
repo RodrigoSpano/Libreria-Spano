@@ -6,7 +6,7 @@
     margin-bottom: 5em;
     text-align: center;
     .line-hover {
-        font-size: 25px;
+        font-size: 30px;
         font-family: $font1;
     }
     .cart-counter {
@@ -74,8 +74,5 @@
         color: #000;
         text-decoration: none;
         border-bottom: 2px black solid;
-    }
-    a::before {
-        content: "<i class="fas fa-shopping-cart"></i>";
     }
 }

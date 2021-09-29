@@ -27,6 +27,20 @@
         height: 100%;
         padding: 20px 100px;
 
+        a {
+            position: absolute;
+            left: 10px;
+            font-size: 16px;
+            color: #000;
+            transition: 0.6s;
+            text-decoration: none;
+            font-family: $font3;
+            text-transform: uppercase;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
         .contact-box {
             max-width: 850px;
             display: grid;

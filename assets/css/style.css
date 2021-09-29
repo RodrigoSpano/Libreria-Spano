@@ -214,7 +214,7 @@
   margin-bottom: 5em;
   text-align: center; }
   .carrito-content .line-hover {
-    font-size: 25px;
+    font-size: 30px;
     font-family: "Amita", cursive; }
   .carrito-content .cart-counter {
     margin-left: 5px;
@@ -270,8 +270,6 @@
     color: #000;
     text-decoration: none;
     border-bottom: 2px black solid; }
-  .buy-shop a::before {
-    content: "<i class=" fas fa-shopping-cart "></i>"; }
 
 .body-contact {
   width: 100%;
@@ -295,6 +293,17 @@
     width: 100%;
     height: 100%;
     padding: 20px 100px; }
+    .body-contact .contact-container a {
+      position: absolute;
+      left: 10px;
+      font-size: 16px;
+      color: #000;
+      transition: 0.6s;
+      text-decoration: none;
+      font-family: "Besley", serif;
+      text-transform: uppercase; }
+    .body-contact .contact-container a:hover {
+      text-decoration: underline; }
     .body-contact .contact-container .contact-box {
       max-width: 850px;
       display: grid;
