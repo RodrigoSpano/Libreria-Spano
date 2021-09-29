@@ -11,5 +11,5 @@ Google Fonts para elegir las distintas tipografias que uso en la página;
 tipografias utilizadas
 Montserrat~Italic
 Amita
-Besley~italic
+Besley(italic)
 End
