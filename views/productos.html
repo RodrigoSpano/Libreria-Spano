@@ -54,17 +54,17 @@
                                 </form>
                             </div>
                         </nav>
-                        <a href="./carrito.html"><i class="carrito fab fa-shopify"></i></a>
+                        <a><i class="carrito fab fa-shopify"></i></a>
                     </div>
                 </nav>
             </div>
         </div>
-
+        
         <div class="container-fluid content-bread">
             <nav class="bread-libros">
                 <ul class="bread-lista">
                     <li class="bread-lista__item"><a class="bread__link bread__link--back" href="../index.html"><i
-                                class="fas fa-long-arrow-alt-left"></i> Inicio</a>
+                        class="fas fa-long-arrow-alt-left"></i> Inicio</a>
                     </li>
                     <li class="bread-lista__item"><a class="bread__link bread__link--red" href="#"> Libros</a>
                     </li>
@@ -78,7 +78,7 @@
             <h1>Escoge el genero</h1>
             <p>Te recomendamos seleccionar la categoria de <strong>Libro</strong> que te interese para facilitar tu
                 búsqueda.</p>
-        </div>
+            </div>
 
 
         <!-- filtros -->
@@ -91,8 +91,30 @@
             </div>
         </div>
     </main>
-    <div class="row cartContainer">
-    </div>
+
+
+    
+    <!-- Scrollable modal -->
+    <button type="button" class="btn-primary p-2 mx-5" data-bs-target="#modalCart" data-bs-toggle="modal">check cart => <i class="carrito fab fa-shopify"></i></button>
+        <div class="modal fade" id="modalCart" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>carrito de compras</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row cartContainer mx-0"></div> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="vaciar" class="btn btn-danger">Restore Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+    
     <!-- footer -->
     <footer class="container-fluid">
         <div class="row">
