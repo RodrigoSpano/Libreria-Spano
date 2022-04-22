@@ -2,7 +2,7 @@ let cont = document.createElement("div");
 let cont2 = document.createElement("div");
 let main = document.querySelector("#main");
 let category = document.querySelector(".filterCategory");
-let restore = document.querySelector("#vaciar")
+let restore = document.querySelector("#restoreCart")
 
 cont.className = "container container-main-libros";
 cont2.className = "row content__cards";
