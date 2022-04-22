@@ -111,3 +111,5 @@ restore.addEventListener('click', () => {
         })
     }
 })
+
+//TODO => agregar mensajes de agregado al carro && mover el boton para acceder al carrito && order libros según categoria(fiction,romance,etc...)
