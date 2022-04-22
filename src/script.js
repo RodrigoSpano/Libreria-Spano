@@ -2,7 +2,7 @@ let cont = document.createElement("div");
 let cont2 = document.createElement("div");
 let main = document.querySelector("#main");
 let category = document.querySelector(".filterCategory");
-let vaciar = document.querySelector("#vaciar")
+let restore = document.querySelector("#vaciar")
 
 cont.className = "container container-main-libros";
 cont2.className = "row content__cards";
@@ -32,7 +32,10 @@ const prod4 = new Inventario(4, "lo poco que sabemos", "fiction", 2190, "../asse
 const prod5 = new Inventario(5, "sabrina", "fiction", 1500, "../assets/media/libros/ficcion/sabrina.jpg");
 const prod6 = new Inventario(6, "riverdale", "fiction", 1500, "../assets/media/libros/ficcion/riverdale.jpg");
 const prod7 = new Inventario(7, "boulevard", "fiction", 1799, "../assets/media/libros/ficcion/boulevard.jpg");
-prods.push(prod1, prod2, prod3, prod4, prod5, prod6, prod7);
+const prod8 = new Inventario(8, "heist","romance",1869,"../assets/media/libros/romantico/heist-1850.jpg");
+const prod9 = new Inventario(9, "el dia que dejo de nevar en alaska","romance",2511,"../assets/media/libros/romantico/alaska.jpg");
+const prod10 = new Inventario(10, "after","romance",2600,"../assets/media/libros/ficcion/after.jpg");
+prods.push(prod1, prod2, prod3, prod4, prod5, prod6, prod7,prod8,prod9,prod10);
 
 
 for (const item of prods) {
@@ -46,6 +49,7 @@ for (const item of prods) {
     const addToCartButtons = document.getElementById(`${item.id}`).addEventListener("click", () => addToShoppingCart(item));
 }
 
+//!renderizado de carro
 function renderCart() {
     const totalCart = cart.reduce((acc, el) => acc + el.price, 0);
     const cartContainer = document.querySelector(".cartContainer");
@@ -53,8 +57,9 @@ function renderCart() {
     <h4>cantidad: ${cart.length} | total: $${totalCart}</h4>`;
     cart.forEach(item => {
         const cartContainerItem = document.createElement("div");
+        cartContainerItem.className = "cartContainerItem"
         cartContainerItem.innerHTML = `
-        <p><strong>Libro</strong></p>: ${item.name} | Precio:$ ${item.price}</p>
+        <p><strong>Libro</strong>: ${item.name} | <strong> Precio</strong>: $${item.price} </p>
         `
         cartContainer.append(cartContainerItem);
         console.log("🚀 ~ file: script.js ~ line 58 ~ renderCart ~ totalCart", totalCart);
@@ -66,3 +71,43 @@ function addToShoppingCart(item) {
     renderCart();
     localStorage.setItem("carrito", JSON.stringify(cart));
 }
+//! boton para vaciar carro
+restore.addEventListener('click', () => {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    })
+    if(cart.length > 0) {
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire(
+                    'Deleted!',
+                    'Your bag is empty!.',
+                    'success'
+                    )
+                    localStorage.removeItem('carrito');
+                    cart.splice(length);
+                    renderCart();
+            } else if (
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    'Your bag is safe 😁🥳',
+                    'error'
+                )
+            }
+        })
+    }
+})

@@ -54,7 +54,6 @@
                                 </form>
                             </div>
                         </nav>
-                        <a><i class="carrito fab fa-shopify"></i></a>
                     </div>
                 </nav>
             </div>
@@ -95,7 +94,7 @@
 
     
     <!-- Scrollable modal -->
-    <button type="button" class="btn-primary p-2 mx-5" data-bs-target="#modalCart" data-bs-toggle="modal">check cart => <i class="carrito fab fa-shopify"></i></button>
+    <button type="button" class="btn-primary p-2 mx-5 bg-black border-0" data-bs-target="#modalCart" data-bs-toggle="modal">check cart => <i class="carrito fab fa-shopify"></i></button>
         <div class="modal fade" id="modalCart" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -104,7 +103,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row cartContainer mx-0"></div> 
+                        <div class="row cartContainer mx-0">                        </div> 
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="vaciar" class="btn btn-danger">Restore Cart</button>
@@ -175,6 +174,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
