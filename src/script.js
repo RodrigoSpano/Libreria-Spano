@@ -106,7 +106,7 @@ function addToShoppingCart(item) {
     })
 }
 
-searchNavbar.onSubmit = (e) => {
+searchNavbar.onsubmit = (e) => {
     e.preventDefault();
     let form = e.target;
 }
