@@ -4,8 +4,8 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="keywords"
         content="Atenas, Libros, Libreria, Harry Potter, Lore, Ficcion, Romance, Tienda online, Envios Gratis">
@@ -47,11 +47,12 @@
                         </div>
                         <nav class="navbar navbar-light ">
                             <div class="container-fluid">
-                                <form class="d-flex">
+                                <form class="d-flex search-navbar">
                                     <input id="search" class="form-control me-2" type="search" placeholder="Buscar"
                                         aria-label="Search">
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </form>
+                                <button type="button" class="btn bg-white btn-primary p-0 mx-3 border-0 border-radius" data-bs-target="#modalCart" data-bs-toggle="modal"><i class="carrito fab fa-shopify"></i></button>
                             </div>
                         </nav>
                     </div>
@@ -83,10 +84,10 @@
         <!-- filtros -->
         <div class="container navbar-filtros">
             <div class="generos__filtros">
-                <a class="filterCategory">Fantasía</a>
-                <a class="filterCategory">Ficción</a>
-                <a class="filterCategory">Terror</a>
-                <a class="filterCategory">Romantico</a>
+                <a class="filterCategory" id="fantasy" >Fantasy</a>
+                <a class="filterCategory"id="fiction" >Fiction</a>
+                <a class="filterCategory" id="terror">Terror</a>
+                <a class="filterCategory" id="romance">Romance</a>
             </div>
         </div>
     </main>
@@ -94,7 +95,7 @@
 
     
     <!-- Scrollable modal -->
-    <button type="button" class="btn-primary p-2 mx-5 bg-black border-0" data-bs-target="#modalCart" data-bs-toggle="modal">check cart => <i class="carrito fab fa-shopify"></i></button>
+    
         <div class="modal fade" id="modalCart" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -107,6 +108,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="restoreCart" class="btn btn-danger">Restore Cart</button>
+                        <button type="button" id="btn-buy-cartItems" class="btn btn-success">Buy</button>
                     </div>
                 </div>
             </div>
@@ -175,6 +177,7 @@
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </body>
 
 </html>

@@ -3,6 +3,12 @@ let cont2 = document.createElement("div");
 let main = document.querySelector("#main");
 let category = document.querySelector(".filterCategory");
 let restore = document.querySelector("#restoreCart")
+let buyCartBtn = document.querySelector("#btn-buy-cartItems")
+let searchNavbar = document.querySelector(".search-navbar");
+// let fantasyFilterBtn = document.querySelector("#fantasy")
+// let fictionFilterBtn = document.querySelector("#fiction")
+// let romanceFilterBtn = document.querySelector("#romance")
+// let terrorFilterBtn = document.querySelector("#terror")
 
 cont.className = "container container-main-libros";
 cont2.className = "row content__cards";
@@ -24,6 +30,7 @@ console.log("🚀 ~ file: script.js ~ line 22 ~ prods", prods)
 
 const cart = JSON.parse(localStorage.getItem("carrito")) || [];
 renderCart();
+let postCart = JSON.parse(localStorage.getItem("postCart")) || [];
 
 const prod1 = new Inventario(1, "seras", "fiction", 1399, "../assets/media/libros/ficcion/ser%C3%A1s.png");
 const prod2 = new Inventario(2, "bajo las estrellas", "romance", 1399, "../assets/media/libros/romantico/bajo-las-estrellas.jpg");
@@ -32,10 +39,10 @@ const prod4 = new Inventario(4, "lo poco que sabemos", "fiction", 2190, "../asse
 const prod5 = new Inventario(5, "sabrina", "fiction", 1500, "../assets/media/libros/ficcion/sabrina.jpg");
 const prod6 = new Inventario(6, "riverdale", "fiction", 1500, "../assets/media/libros/ficcion/riverdale.jpg");
 const prod7 = new Inventario(7, "boulevard", "fiction", 1799, "../assets/media/libros/ficcion/boulevard.jpg");
-const prod8 = new Inventario(8, "heist","romance",1869,"../assets/media/libros/romantico/heist-1850.jpg");
-const prod9 = new Inventario(9, "el dia que dejo de nevar en alaska","romance",2511,"../assets/media/libros/romantico/alaska.jpg");
-const prod10 = new Inventario(10, "after","romance",2600,"../assets/media/libros/ficcion/after.jpg");
-prods.push(prod1, prod2, prod3, prod4, prod5, prod6, prod7,prod8,prod9,prod10);
+const prod8 = new Inventario(8, "heist", "romance", 1869, "../assets/media/libros/romantico/heist-1850.jpg");
+const prod9 = new Inventario(9, "el dia que dejo de nevar en alaska", "romance", 2511, "../assets/media/libros/romantico/alaska.jpg");
+const prod10 = new Inventario(10, "after", "romance", 2600, "../assets/media/libros/ficcion/after.jpg");
+prods.push(prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8, prod9, prod10);
 
 
 for (const item of prods) {
@@ -48,6 +55,17 @@ for (const item of prods) {
     cont2.appendChild(itemCard);
     const addToCartButtons = document.getElementById(`${item.id}`).addEventListener("click", () => addToShoppingCart(item));
 }
+
+//!filter
+// fantasyFilterBtn.onclick = () => {
+//     const fantasyResult = prods.filter((el) => el.category == "fantasy");
+//     console.log("🚀 ~ file: script.js ~ line 62 ~ fantasyResult", fantasyResult)
+//     prods.forEach((item) =>{
+//         if(`${item.category}` == fantasyResult){
+            
+//         }
+//     })
+// } //todo => averiguar como hacerlo
 
 //!renderizado de carro
 function renderCart() {
@@ -70,7 +88,29 @@ function addToShoppingCart(item) {
     cart.push(item);
     renderCart();
     localStorage.setItem("carrito", JSON.stringify(cart));
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    Toast.fire({
+        icon: 'success',
+        title: 'Added successfully'
+    })
 }
+
+searchNavbar.onSubmit = (e) => {
+    e.preventDefault();
+    let form = e.target;
+}
+
 //! boton para vaciar carro
 restore.addEventListener('click', () => {
     const swalWithBootstrapButtons = Swal.mixin({
@@ -80,7 +120,7 @@ restore.addEventListener('click', () => {
         },
         buttonsStyling: false
     })
-    if(cart.length > 0) {
+    if (cart.length > 0) {
         swalWithBootstrapButtons.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -93,12 +133,12 @@ restore.addEventListener('click', () => {
             if (result.isConfirmed) {
                 swalWithBootstrapButtons.fire(
                     'Deleted!',
-                    'Your bag is empty!.',
+                    'Your bag is empty!.✔',
                     'success'
-                    )
-                    localStorage.removeItem('carrito');
-                    cart.splice(length);
-                    renderCart();
+                )
+                localStorage.removeItem('carrito');
+                cart.splice(length);
+                renderCart();
             } else if (
                 result.dismiss === Swal.DismissReason.cancel
             ) {
@@ -111,5 +151,13 @@ restore.addEventListener('click', () => {
         })
     }
 })
+//!boton para proceder a comprar el carrito 
+buyCartBtn.onclick = () => {
+    if (cart.length > 0) {
 
-//TODO => agregar mensajes de agregado al carro && mover el boton para acceder al carrito && order libros según categoria(fiction,romance,etc...)
+    }
+};
+
+
+
+//TODO =>hacer boton de compra funcione && order libros según categoria(fiction,romance,etc...)
