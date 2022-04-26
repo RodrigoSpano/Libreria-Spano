@@ -5,10 +5,12 @@ let category = document.querySelector(".filterCategory");
 let restore = document.querySelector("#restoreCart")
 let buyCartBtn = document.querySelector("#btn-buy-cartItems")
 let searchNavbar = document.querySelector(".search-navbar");
-// let fantasyFilterBtn = document.querySelector("#fantasy")
-// let fictionFilterBtn = document.querySelector("#fiction")
-// let romanceFilterBtn = document.querySelector("#romance")
-// let terrorFilterBtn = document.querySelector("#terror")
+let searchBtn = document.querySelector(".btn-search");
+let inputSearch = document.querySelector("#search");
+let cateFantasy = document.querySelector("#fantasy");
+// let cateFiction = document.querySelector("#fiction");
+// let cateRomance = document.querySelector("#romance");
+// let cateTerror = document.querySelector("#terror");
 
 cont.className = "container container-main-libros";
 cont2.className = "row content__cards";
@@ -30,7 +32,6 @@ console.log("🚀 ~ file: script.js ~ line 22 ~ prods", prods)
 
 const cart = JSON.parse(localStorage.getItem("carrito")) || [];
 renderCart();
-let postCart = JSON.parse(localStorage.getItem("postCart")) || [];
 
 const prod1 = new Inventario(1, "seras", "fiction", 1399, "../assets/media/libros/ficcion/ser%C3%A1s.png");
 const prod2 = new Inventario(2, "bajo las estrellas", "romance", 1399, "../assets/media/libros/romantico/bajo-las-estrellas.jpg");
@@ -57,15 +58,14 @@ for (const item of prods) {
 }
 
 //!filter
-// fantasyFilterBtn.onclick = () => {
-//     const fantasyResult = prods.filter((el) => el.category == "fantasy");
-//     console.log("🚀 ~ file: script.js ~ line 62 ~ fantasyResult", fantasyResult)
-//     prods.forEach((item) =>{
-//         if(`${item.category}` == fantasyResult){
-            
-//         }
+// cateFantasy.onclick = () =>{
+//     const fan = cateFantasy.textContent;
+//     console.log(fan);
+//     prods.forEach(item =>{
+//         item.category === fantasy && console.log(item.name)
 //     })
-// } //todo => averiguar como hacerlo
+// }
+//todo => keep trying
 
 //!renderizado de carro
 function renderCart() {
@@ -92,24 +92,19 @@ function addToShoppingCart(item) {
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 3000,
+        timer: 1000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
     })
-
     Toast.fire({
         icon: 'success',
         title: 'Added successfully'
     })
 }
 
-searchNavbar.onsubmit = (e) => {
-    e.preventDefault();
-    let form = e.target;
-}
 
 //! boton para vaciar carro
 restore.addEventListener('click', () => {
@@ -154,10 +149,42 @@ restore.addEventListener('click', () => {
 //!boton para proceder a comprar el carrito 
 buyCartBtn.onclick = () => {
     if (cart.length > 0) {
-
+        let timerInterval
+        Swal.fire({
+            title: 'thanks for trust!',
+            html: 'processing information... <b></b>',
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+                localStorage.setItem('postCart', JSON.stringify(cart));
+                localStorage.removeItem('carrito')
+                cart.splice(length);
+                renderCart();
+            }
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {}
+        })
     }
 };
 
-
+// let searchNavbar = document.querySelector(".search-navbar");
+// let searchBtn = document.querySelector(".btn-search");
+// let inputSearch = document.querySelector("#search");
+searchNavbar.onclick = (e)=> e.preventDefault();
+inputSearch.onkeyup = (e) => {
+    const inputVal = e.target.value.toLowerCase();
+    console.log(inputVal);
+    prods.forEach(item =>{
+        item.name.toLowerCase() == inputVal && console.log([item.name, item.price])
+    })
+}
 
 //TODO =>hacer boton de compra funcione && order libros según categoria(fiction,romance,etc...)
