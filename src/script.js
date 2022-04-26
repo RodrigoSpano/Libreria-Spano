@@ -58,13 +58,15 @@ for (const item of prods) {
 }
 
 //!filter
-// cateFantasy.onclick = () =>{
-//     const fan = cateFantasy.textContent;
-//     console.log(fan);
-//     prods.forEach(item =>{
-//         item.category === fantasy && console.log(item.name)
-//     })
-// }
+cateFantasy.onclick = (e) => {
+    const fan = e.target.textContent;
+    prods.forEach(item => {
+        item.category === "fantasy" && console.log(item);
+    })
+}
+//? pude hacerlo funcionar, me queda mostrarlo y hacerlo para las demas categorias(terror, fiction, romance)
+
+
 //todo => keep trying
 
 //!renderizado de carro
@@ -175,16 +177,23 @@ buyCartBtn.onclick = () => {
     }
 };
 
-// let searchNavbar = document.querySelector(".search-navbar");
-// let searchBtn = document.querySelector(".btn-search");
-// let inputSearch = document.querySelector("#search");
-searchNavbar.onclick = (e)=> e.preventDefault();
+
 inputSearch.onkeyup = (e) => {
     const inputVal = e.target.value.toLowerCase();
-    console.log(inputVal);
-    prods.forEach(item =>{
-        item.name.toLowerCase() == inputVal && console.log([item.name, item.price])
-    })
+    searchNavbar.onsubmit = (e) => {
+        e.preventDefault();
+        prods.forEach(item => {
+            item.name == inputVal && Swal.fire({
+                title: "DATOS DE PRODUCTO:",
+                text: `${item.name} | categoria: ${item.category} |  $${item.price}`,
+                imageUrl: item.img,
+                imageHeight: 400,
+                imageAlt: 'A tall image',
+                confirmButtonText: 'exit',
+                confirmButtonColor: '#b61928',
+            });
+        })
+    }
 }
 
 //TODO =>hacer boton de compra funcione && order libros según categoria(fiction,romance,etc...)
