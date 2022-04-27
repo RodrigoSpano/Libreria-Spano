@@ -8,9 +8,14 @@ let searchNavbar = document.querySelector(".search-navbar");
 let searchBtn = document.querySelector(".btn-search");
 let inputSearch = document.querySelector("#search");
 let cateFantasy = document.querySelector("#fantasy");
-// let cateFiction = document.querySelector("#fiction");
-// let cateRomance = document.querySelector("#romance");
-// let cateTerror = document.querySelector("#terror");
+let cateFiction = document.querySelector("#fiction");
+let cateRomance = document.querySelector("#romance");
+let cateTerror = document.querySelector("#terror");
+let formData = document.querySelector('#form-personalData');
+let inputNamePersonalData = document.querySelector("#inputName-data");
+let inputSelectPersonalData = document.querySelector("#cardType-data");
+let inputAddressPersonalData = document.querySelector("#address-data");
+let inputCardNumberData = document.querySelector("#cardNumber-data");
 
 cont.className = "container container-main-libros";
 cont2.className = "row content__cards";
@@ -26,6 +31,7 @@ class Inventario {
         this.img = img;
     }
 }
+
 
 const prods = [];
 console.log("🚀 ~ file: script.js ~ line 22 ~ prods", prods)
@@ -59,27 +65,39 @@ for (const item of prods) {
 
 //!filter
 cateFantasy.onclick = (e) => {
-    const fan = e.target.textContent;
     prods.forEach(item => {
-        item.category === "fantasy" && console.log(item);
+        item.category === 'fantasy' && console.log(item);
     })
 }
-//? pude hacerlo funcionar, me queda mostrarlo y hacerlo para las demas categorias(terror, fiction, romance)
-
-
-//todo => keep trying
+cateFiction.onclick = () => {
+    prods.forEach(item => {
+        item.category === 'fiction' && console.log(item);
+    })
+}
+cateRomance.onclick = () => {
+    prods.forEach(item => {
+        item.category === 'romance' && console.log(item);
+    })
+}
+cateTerror.onclick = () => {
+    swal.fire({
+        icon: 'error',
+        text: 'aun no hay libros de este tipo..'
+    })
+} //todo => logarar q se muestre en pantalla
 
 //!renderizado de carro
 function renderCart() {
     const totalCart = cart.reduce((acc, el) => acc + el.price, 0);
     const cartContainer = document.querySelector(".cartContainer");
     cartContainer.innerHTML = `
-    <h4>cantidad: ${cart.length} | total: $${totalCart}</h4>`;
+    <h4>amount: ${cart.length} | total price: $${totalCart}</h4>`;
     cart.forEach(item => {
         const cartContainerItem = document.createElement("div");
-        cartContainerItem.className = "cartContainerItem"
+        cartContainerItem.className = "cartContainerItem d-flex mt-2"
         cartContainerItem.innerHTML = `
-        <p><strong>Libro</strong>: ${item.name} | <strong> Precio</strong>: $${item.price} </p>
+        <img class="mx-2" style="width: 50px;" src="${item.img}"></img>
+        <p><strong>Libro</strong>: ${item.name} | <br><strong> Precio</strong>: $${item.price} </p>
         `
         cartContainer.append(cartContainerItem);
         console.log("🚀 ~ file: script.js ~ line 58 ~ renderCart ~ totalCart", totalCart);
@@ -106,6 +124,22 @@ function addToShoppingCart(item) {
         title: 'Added successfully'
     })
 }
+
+//!personal data
+// inputNamePersonalData 
+// inputSelectPersonalData 
+// inputAddressPersonalData 
+// inputCardPersonalData 
+// formData
+// class PersonalData {
+//     constructor(fullName, card, cardNumber, address){
+//         this.fullName= fullName,
+//         this.card = card,
+//         this.cardNumber = cardNumber,
+//         this.address = address
+//     }
+// }
+
 
 
 //! boton para vaciar carro
@@ -178,7 +212,7 @@ buyCartBtn.onclick = () => {
 };
 
 
-inputSearch.onkeyup = (e) => {
+inputSearch.onchange = (e) => {
     const inputVal = e.target.value.toLowerCase();
     searchNavbar.onsubmit = (e) => {
         e.preventDefault();
@@ -195,5 +229,3 @@ inputSearch.onkeyup = (e) => {
         })
     }
 }
-
-//TODO =>hacer boton de compra funcione && order libros según categoria(fiction,romance,etc...)
