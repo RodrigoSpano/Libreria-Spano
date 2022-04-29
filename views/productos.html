@@ -102,7 +102,7 @@
         <div class="modal-dialog modal-fullscreen-sm-down">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">you cannot buy anything without completing the data</h5>
+                    <h5 class="modal-title">Complete Data</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -121,14 +121,15 @@
                                 <input type="text" name="address" id="address-data" placeholder="delivery address" class="col-md-6 col-ms-auto">
                                 <input type="number" name="cardNumber" id="cardNumber-data" placeholder="card number" class="col-md-6 col-ms-auto">
                             </div>
-                            <div class="btn-content d-flex" style="justify-content: center;">
-                                <button id="save-data" class="btn btn-primary">Save changes</button>
+                            <div class="btn-content d-flex" style="justify-content: space-around; ">
+                                <button id="restore-data" class="btn btn-danger">restore data</button>
+                                <button id="save-data" class="btn btn-success">Save changes</button>
                             </div>
                         <!-- </form> -->
 
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer showDataFooterModal d-flex justify-content-center">
                 </div>
             </div>
         </div>

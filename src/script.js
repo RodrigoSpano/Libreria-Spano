@@ -43,6 +43,14 @@ const prod9 = new Inventario(9, "el dia que dejo de nevar en alaska", "romance",
 const prod10 = new Inventario(10, "after", "romance", 2600, "../assets/media/libros/ficcion/after.jpg");
 prods.push(prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8, prod9, prod10);
 
+const alertData = () => {
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            Swal.fire('make sure you have completed your personal data to be able to buy')
+        }, 5000)
+    })
+}
+alertData()
 
 for (const item of prods) {
     let itemCard = document.createElement("div");
@@ -54,6 +62,7 @@ for (const item of prods) {
     cont2.appendChild(itemCard);
     const addToCartButtons = document.getElementById(`${item.id}`).addEventListener("click", () => addToShoppingCart(item));
 }
+
 
 //!filter
 categoriesFilter.forEach(cate => {
@@ -103,21 +112,32 @@ function addToShoppingCart(item) {
 }
 
 //!personal data
+let dataCloud = {};
+const footerModalData = document.querySelector('.showDataFooterModal');
 let sendData = document.querySelector('#save-data')
 .addEventListener('click', dataCapture);
-function dataCapture(){
+async function dataCapture(){
     return new Promise(resolve=>{
         const dataName = document.querySelector('#inputName-data').value.toLowerCase();
         const dataCardType = document.querySelector('#cardType-data').value.toLowerCase();
         const dataAddress = document.querySelector('#address-data').value.toLowerCase();
         const dataCardNumber = document.querySelector('#cardNumber-data').value.toLowerCase();
-        const dataCloud = [dataName, dataCardType, dataAddress, dataCardNumber];
+        dataCloud = {dataName, dataCardType, dataAddress, dataCardNumber};
         localStorage.setItem('personalData', JSON.stringify(dataCloud));
         console.log(dataCloud);
-        resolve();
+        resolve(dataCloud);
+    }).then((resp)=>{
+        footerModalData.innerHTML = `
+        <h6>Name: ${resp.dataName} | Address: ${resp.dataAddress} </br>
+        Card: ${resp.dataCardType} | Number: top secret.. </h6>
+        `
     })
 }
-
+const restoreData = document.querySelector('#restore-data')
+.onclick = () => {
+    dataCloud = {};
+    localStorage.removeItem('personalData');
+}
 
 //! boton para vaciar carro
 restore.addEventListener('click', () => {
@@ -161,7 +181,7 @@ restore.addEventListener('click', () => {
 })
 //!boton para proceder a comprar el carrito 
 buyCartBtn.onclick = () => {
-    if (cart.length > 0) {
+    if (cart.length > 0 && dataCloud.length > 0) {
         let timerInterval
         Swal.fire({
             title: 'thanks for trust!',
@@ -206,3 +226,4 @@ inputSearch.onchange = (e) => {
         })
     }
 }
+
