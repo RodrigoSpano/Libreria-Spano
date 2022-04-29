@@ -89,10 +89,10 @@
         <!-- filtros -->
         <div class="container navbar-filtros">
             <div class="generos__filtros">
-                <a class="filterCategory" id="fantasy">Fantasy</a>
-                <a class="filterCategory" id="fiction">Fiction</a>
-                <a class="filterCategory" id="terror">Terror</a>
-                <a class="filterCategory" id="romance">Romance</a>
+                <a class="filterCategory" id="fantasy" data-category="fantasy" >Fantasy</a>
+                <a class="filterCategory" id="fiction" data-category="fiction" >Fiction</a>
+                <a class="filterCategory" id="terror" data-category="terror">Terror</a>
+                <a class="filterCategory" id="romance" data-category="romance">Romance</a>
             </div>
         </div>
     </main>
@@ -108,7 +108,7 @@
                 <div class="modal-body">
                     <div class="container-fluid">
 
-                        <form id="form-personalData d-flex" autocomplete="off">
+                        <!-- <form name="formper" id="form-personalData d-flex" autocomplete="off"> -->
                             <div class="row" style="margin-bottom: 10px;">
                                 <input type="text" name="name" id="inputName-data" placeholder="first name" class="col-md-6 col-ms-auto">
                                 <select name="cardType" id="cardType-data" class="col-md-6 col-ms-auto">
@@ -122,9 +122,9 @@
                                 <input type="number" name="cardNumber" id="cardNumber-data" placeholder="card number" class="col-md-6 col-ms-auto">
                             </div>
                             <div class="btn-content d-flex" style="justify-content: center;">
-                                <button class="btn btn-primary">Save changes</button>
+                                <button id="save-data" class="btn btn-primary">Save changes</button>
                             </div>
-                        </form>
+                        <!-- </form> -->
 
                     </div>
                 </div>

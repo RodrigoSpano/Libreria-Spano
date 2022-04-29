@@ -7,15 +7,7 @@ let buyCartBtn = document.querySelector("#btn-buy-cartItems")
 let searchNavbar = document.querySelector(".search-navbar");
 let searchBtn = document.querySelector(".btn-search");
 let inputSearch = document.querySelector("#search");
-let cateFantasy = document.querySelector("#fantasy");
-let cateFiction = document.querySelector("#fiction");
-let cateRomance = document.querySelector("#romance");
-let cateTerror = document.querySelector("#terror");
-let formData = document.querySelector('#form-personalData');
-let inputNamePersonalData = document.querySelector("#inputName-data");
-let inputSelectPersonalData = document.querySelector("#cardType-data");
-let inputAddressPersonalData = document.querySelector("#address-data");
-let inputCardNumberData = document.querySelector("#cardNumber-data");
+let categoriesFilter = document.querySelectorAll('.filterCategory');
 
 cont.className = "container container-main-libros";
 cont2.className = "row content__cards";
@@ -64,27 +56,12 @@ for (const item of prods) {
 }
 
 //!filter
-cateFantasy.onclick = (e) => {
-    prods.forEach(item => {
-        item.category === 'fantasy' && console.log(item);
-    })
-}
-cateFiction.onclick = () => {
-    prods.forEach(item => {
-        item.category === 'fiction' && console.log(item);
-    })
-}
-cateRomance.onclick = () => {
-    prods.forEach(item => {
-        item.category === 'romance' && console.log(item);
-    })
-}
-cateTerror.onclick = () => {
-    swal.fire({
-        icon: 'error',
-        text: 'aun no hay libros de este tipo..'
-    })
-} //todo => logarar q se muestre en pantalla
+categoriesFilter.forEach(cate => {
+    cate.onclick = (e) => {
+        const showFilt = prods.filter(el => el.category == e.target.dataset.category);
+        console.log(showFilt);
+    }
+}) //todo => haCer q se muestre en pantalla
 
 //!renderizado de carro
 function renderCart() {
@@ -126,20 +103,20 @@ function addToShoppingCart(item) {
 }
 
 //!personal data
-// inputNamePersonalData 
-// inputSelectPersonalData 
-// inputAddressPersonalData 
-// inputCardPersonalData 
-// formData
-// class PersonalData {
-//     constructor(fullName, card, cardNumber, address){
-//         this.fullName= fullName,
-//         this.card = card,
-//         this.cardNumber = cardNumber,
-//         this.address = address
-//     }
-// }
-
+let sendData = document.querySelector('#save-data')
+.addEventListener('click', dataCapture);
+function dataCapture(){
+    return new Promise(resolve=>{
+        const dataName = document.querySelector('#inputName-data').value.toLowerCase();
+        const dataCardType = document.querySelector('#cardType-data').value.toLowerCase();
+        const dataAddress = document.querySelector('#address-data').value.toLowerCase();
+        const dataCardNumber = document.querySelector('#cardNumber-data').value.toLowerCase();
+        const dataCloud = [dataName, dataCardType, dataAddress, dataCardNumber];
+        localStorage.setItem('personalData', JSON.stringify(dataCloud));
+        console.log(dataCloud);
+        resolve();
+    })
+}
 
 
 //! boton para vaciar carro
