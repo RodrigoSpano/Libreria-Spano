@@ -28,9 +28,9 @@ window.addEventListener('load', async () => {
 function renderCart(){
     cart.forEach(prod=>{
         let divProd = document.createElement('div');
-        divProd.classList = "d-flex align-items-center"
+        divProd.classList = "d-flex align-items-center mb-3"
         divProd.innerHTML = `
-        <img class="w-25 mx-3" src="${prod.img}">
+        <img class="mx-3" style="width:60px" src="${prod.img}">
         <h3 class="small" >Book: ${prod.name} </br>| ${prod.category} | $${prod.price}
         `
         modalCart.appendChild(divProd);
