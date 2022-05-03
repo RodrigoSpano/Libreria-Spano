@@ -47,14 +47,15 @@
                         </div>
                         <nav class="navbar navbar-light ">
                             <div class="container-fluid">
-                                <form class="d-flex">
+                                <form class="d-flex formSearch">
                                     <input class="form-control me-2" type="search" placeholder="Search your book"
                                         aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                    <button class="searchBtn btn btn-outline-success" type="submit">Search</button>
                                 </form>
                             </div>
                         </nav>
-                        <a href="./carrito.html"><i class="carrito fab fa-shopify"></i></a>
+                        <a data-bs-target="#modalCart" data-bs-toggle="modal" ><i class="carrito fab fa-shopify"></i></a>
+                        <a class="mx-3 text-success" type="button" data-bs-target="#accountModal" data-bs-toggle="modal"><i class="fas fa-user"></i></button>
                     </div>
                 </nav>
             </div>
@@ -79,21 +80,60 @@
             <p>we recommend you to choose your favourite<strong>book</strong> category.</p>
         </div>
 
+        <!-- modal account -->
+        <div class="modal" id="modalAccount" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">shopping cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger">Restore</button>
+                        <button type="button" class="btn btn-success">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal cart -->
+        <div class="modal" id="modalCart" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">shopping cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-container d-flex"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger">Restore</button>
+                        <button type="button" class="btn btn-success">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- filtros -->
         <div class="container navbar-filtros">
             <div class="generos__filtros">
-                <a href="./fantasia.html">Fantasy</a>
-                <a href="./ficcion.html">Fiction</a>
-                <a href="./terror.html">Terror</a>
-                <a href="./romantico.html">Romance</a>
+                <a>Fantasy</a>
+                <a>Fiction</a>
+                <a>Terror</a>
+                <a>Romance</a>
             </div>
         </div>
 
         <!-- productos -->
         <div class="container container-main-libros">
             <!-- row -->
-            
+            <div class="row content__cards">
+
+            </div>
         </div>
     </main>
 
@@ -157,6 +197,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
     </script>
+    <script src="/src/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>
