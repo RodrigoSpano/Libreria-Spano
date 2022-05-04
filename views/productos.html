@@ -55,7 +55,7 @@
                             </div>
                         </nav>
                         <a data-bs-target="#modalCart" data-bs-toggle="modal" ><i class="carrito fab fa-shopify"></i></a>
-                        <button class="mx-3 btn" type="button" data-bs-target="#accountModal" data-bs-toggle="modal"><i class="fas fa-user"></i></button>
+                        <button class="mx-3 btn" type="button" data-bs-target="#modalAccount" data-bs-toggle="modal"><i class="fas fa-user"></i></button>
                     </div>
                 </nav>
             </div>
@@ -85,14 +85,26 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">shopping cart</h5>
+                        <h5 class="modal-title ">Personal Data</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        
+                            <div class="row d-flex">
+                                <input type="text" class="nameAcc" minlength="3" placeholder="Full name" required>
+                                <input type="text" minlength="3" class="addressAcc mt-2" placeholder="Address" required>
+                                <select  class="cardAcc mt-2" required>
+                                    <option disabled selected >choose an option</option>
+                                    <option value="visa">visa</option>
+                                    <option value="mastercard">mastercard</option>
+                                </select>
+                                <input type="number" minlength="14" maxlength="16" placeholder="card number" class="cardNumAcc mt-2" required>
+                            </div>
+                        
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger">Restore</button>
-                        <button type="button" class="btn btn-success">Buy</button>
+                        <button type="button" class="btn btn-danger restoreAcc">Restore</button>
+                        <button type="button" class="btn btn-success confirmAcc">Confirm</button>
                     </div>
                 </div>
             </div>
@@ -110,8 +122,8 @@
                         <div class="cart-container"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger">Restore</button>
-                        <button type="button" class="btn btn-success">Buy</button>
+                        <button type="button" class="btn btn-danger restoreBtn">Restore</button>
+                        <button type="button" class="btn btn-success buyBtn">Buy</button>
                     </div>
                 </div>
             </div>
