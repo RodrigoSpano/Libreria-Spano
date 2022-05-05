@@ -77,8 +77,8 @@ function saveData() { //? collect inf
 //?confirm button => account data
 const confirmAccount = document.querySelector(".confirmAcc").onclick = () => {
     saveData();
-    cloudAccount.length > 0 && 
-    localStorage.setItem("account", JSON.stringify(cloudAccount));
+    cloudAccount.length > 0 &&
+        localStorage.setItem("account", JSON.stringify(cloudAccount));
     const Toast = Swal.mixin({
         toast: true,
         position: 'center',
@@ -192,3 +192,4 @@ inputSearch.onchange = (e) => {
         })
     }
 }
+
