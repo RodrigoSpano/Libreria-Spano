@@ -205,7 +205,7 @@ for(const btn of filterButtons){
         showItem.forEach(i=>{
             console.log(i.name)
             let nameLi = document.createElement('p');
-            nameLi.innerText = `➲${i.name}`
+            nameLi.innerText = `⇝${i.name}`
             contList.append(nameLi)
         })
         filterBooksCont.append(contList)
