@@ -3,17 +3,17 @@ const formSearch = document.querySelector(".formSearch");
 const inputSearch = document.querySelector(".form-control");
 let restore = document.querySelector(".restoreBtn");
 let buyBtn = document.querySelector(".buyBtn");
-
-let prods = [];
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 renderCart();
 
+let itemCard;
+let prods = [];
 window.addEventListener("load", async () => {
     const resp = await fetch("https://6271666fc455a64564b27e22.mockapi.io/prods");
     prods = await resp.json();
 
     prods.forEach(item => {
-        let itemCard = document.createElement("div");
+        itemCard = document.createElement("div");
         itemCard.classList = "card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3";
         itemCard.innerHTML = `
         <img src="${item.img}" alt="${item.name}"></img>
@@ -194,21 +194,20 @@ inputSearch.onchange = (e) => {
 }
 
 let filterButtons = document.querySelectorAll('.cateFilt');
+let filterBooksCont = document.querySelector('.filterNames');
+filterBooksCont.classList = 'd-flex justify-content-space-between'
 for(const btn of filterButtons){
     btn.onclick=(e)=>{
         let btnData = e.target.dataset.category;
         const showItem = prods.filter((el)=> el.category == btnData);
+        let contList = document.createElement('div');
+        contList.innerHTML = `${btnData.toUpperCase()}`
         showItem.forEach(i=>{
             console.log(i.name)
-            let itemCard = document.createElement('div');
-            itemCard.classList = "card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3";
-            itemCard.innerHTML = `
-            <img src="${i.img}" alt="${i.name}"></img>
-            <h2 title="${i.name}">${i.name}</h2>
-            <p>$${i.price}</p>
-            <a id="${i.id}" class="btn">add +</a>
-            `
-            booksContainer.appendChild(itemCard);
+            let nameLi = document.createElement('p');
+            nameLi.innerText = `➲${i.name}`
+            contList.append(nameLi)
         })
+        filterBooksCont.append(contList)
     }
 }
