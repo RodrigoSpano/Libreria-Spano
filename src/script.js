@@ -193,3 +193,22 @@ inputSearch.onchange = (e) => {
     }
 }
 
+let filterButtons = document.querySelectorAll('.cateFilt');
+for(const btn of filterButtons){
+    btn.onclick=(e)=>{
+        let btnData = e.target.dataset.category;
+        const showItem = prods.filter((el)=> el.category == btnData);
+        showItem.forEach(i=>{
+            console.log(i.name)
+            let itemCard = document.createElement('div');
+            itemCard.classList = "card__body col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3";
+            itemCard.innerHTML = `
+            <img src="${i.img}" alt="${i.name}"></img>
+            <h2 title="${i.name}">${i.name}</h2>
+            <p>$${i.price}</p>
+            <a id="${i.id}" class="btn">add +</a>
+            `
+            booksContainer.appendChild(itemCard);
+        })
+    }
+}
