@@ -148,8 +148,8 @@ buyBtn.onclick = () => {
     if (cart.length > 0 && cloudAccount.length > 0) {
         let timerInterval
         Swal.fire({
-            title: 'Auto close alert!',
-            html: 'I will close in <b></b> milliseconds.',
+            title: 'Processing purchase!',
+            html: 'checking information <b></b>%.',
             timer: 2000,
             timerProgressBar: true,
             didOpen: () => {
@@ -201,6 +201,7 @@ for(const btn of filterButtons){
         let btnData = e.target.dataset.category;
         const showItem = prods.filter((el)=> el.category == btnData);
         let contList = document.createElement('div');
+        contList.classList = "mx-2"
         contList.innerHTML = `${btnData.toUpperCase()}`
         showItem.forEach(i=>{
             console.log(i.name)
